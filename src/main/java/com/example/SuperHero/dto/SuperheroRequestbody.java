@@ -57,5 +57,7 @@ public class SuperheroRequestbody {
         public String toString() {
             return "SuperheroRequestBody.SuperheroRequestBodyBuilder(name=" + this.name + ", power=" + this.power + ", universe=" + this.universe + ")";
         }
+
+
     }
 }

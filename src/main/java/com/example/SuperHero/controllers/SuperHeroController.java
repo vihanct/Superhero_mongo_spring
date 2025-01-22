@@ -16,9 +16,9 @@ public class SuperHeroController {
     }
 
     @GetMapping("/superhero")
-    public SuperHero getSuperhero(@RequestParam(value="name",defaultValue = "Vihan") String name,
-                                  @RequestParam(value="Universe",defaultValue = "Earth") String Universe,
-                                  @RequestParam(value="universe",defaultValue = "Earth") String universe
+    public SuperHero getSuperhero(@RequestParam(value="name",required=false) String name,
+                                  @RequestParam(value="Universe",required = false) String Universe,
+                                  @RequestParam(value="universe",required=false) String universe
     ){
         return superheroservice.getSuperhero(name,Universe,universe);
     }
