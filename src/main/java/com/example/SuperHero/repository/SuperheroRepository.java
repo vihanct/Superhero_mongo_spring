@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface SuperheroRepository extends MongoRepository<SuperHero,String> {
     void deleteByName(String name);
+    List<SuperHero> findAll();
     List<SuperHero> findAllByName(String name);
     List<SuperHero> findAllByUniverse(String name);
     List<SuperHero> findAllByuniverse(String name);

@@ -6,6 +6,8 @@ import com.example.SuperHero.dto.SuperheroRequestbody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 public class SuperHeroController {
@@ -16,9 +18,9 @@ public class SuperHeroController {
     }
 
     @GetMapping("/superhero")
-    public SuperHero getSuperhero(@RequestParam(value="name",required=false) String name,
-                                  @RequestParam(value="Universe",required = false) String Universe,
-                                  @RequestParam(value="universe",required=false) String universe
+    public List<SuperHero> getSuperhero(@RequestParam(value="name",required=false) String name,
+                                        @RequestParam(value="Universe",required = false) String Universe,
+                                        @RequestParam(value="universe",required=false) String universe
     ){
         return superheroservice.getSuperhero(name,Universe,universe);
     }
